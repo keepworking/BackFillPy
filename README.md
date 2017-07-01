@@ -1,2 +1,4 @@
 # BackFillPy
-fill empty wall paper background for long Screen
+
+모니터와 비율이 맞지않는 이미지를 변환해주는 툴입니다.
+동작은 바로 아래와 같습니다.
