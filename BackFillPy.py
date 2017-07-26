@@ -37,7 +37,11 @@ del img
 back = back.filter(ImageFilter.GaussianBlur(10))
 
 #각 이미지 배치및 저장
-wallpaper.paste(back,(width/2-back.size[0]/2,height/2-back.size[1]/2))
-wallpaper.paste(front,(width/2-front.size[0]/2,height/2-front.size[1]/2))
+try:
+    wallpaper.paste(back,(width/2-back.size[0]/2,height/2-back.size[1]/2),back)
+    wallpaper.paste(front,(width/2-front.size[0]/2,height/2-front.size[1]/2),front)
+except:
+    wallpaper.paste(back,(width/2-back.size[0]/2,height/2-back.size[1]/2))
+    wallpaper.paste(front,(width/2-front.size[0]/2,height/2-front.size[1]/2))
 
 wallpaper.save("export.png","PNG")
